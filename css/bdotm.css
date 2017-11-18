@@ -1,0 +1,428 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:700,300);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+/*
+
+2014 Brendan Martin
+1. overall
+2. hero
+3. description
+4. skills
+5. work
+6. contact
+7. footer
+
+*/
+
+
+
+
+
+html, body {
+	width: 100%;
+	height: 100%;
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+p {
+    font-size: .8em;
+    line-height: 1.5em;
+}
+
+h4 {
+    font-size: 1.2em;
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+
+/* GLOBALS */
+.hidden {
+    display: none;
+}
+
+.thin {
+    font-weight: 100;
+}
+
+
+::-moz-selection { color: black;  background: #FFD6A2; }
+::selection      { color: black;  background: #FFD6A2; }
+
+
+/* FONT AWESOME*/
+.f1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    height: 40px;
+    width: 50px;
+    padding-top: 9px;
+    border-radius: 100%;
+    background: #FFF;
+    background-image: -moz-linear-gradient(45deg, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 0%);
+    background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 0%);
+    background-image: -o-linear-gradient(45deg, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 0%);
+    background-image: -ms-linear-gradient(45deg, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 0%);
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 0%);
+}
+
+
+
+/* NAV */
+.nav {
+    width: 100%;
+    color: black;
+    text-align: center;
+    background: rgba(240,240,240,.9);
+    position: fixed;
+    z-index: 200;
+}
+
+.nav_logo {
+    /* probably center */
+    height: 30px;
+    z-index: 300;
+}
+
+.nav_logo h5 {
+    padding: none;
+    margin: none;
+}
+
+.nav_links {
+    /* make into hamburger*/
+    display: none;
+}
+
+.nav_link {
+    height: 75px;
+    line-height: 75px;
+    display: inline-block;
+    padding: 0 15px;
+    font-size: .75em;
+}
+
+
+
+/* HERO */
+.hero {
+    height: 200px;
+    width: 100%;
+    background: url('../img/tmp_background_small.jpg');
+    background-image: url(http://templated.co/items/demos/transit/images/dark_tint.png), url('../img/tmp_background_small.jpg');
+    background-position: center center;
+    background-size: cover;
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+.hero_inner_container {
+    z-index: 100;
+    height: 200px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 60%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.hero_image {
+    height: 65px;
+    width: 65px;
+    margin: 0 auto 10px;
+    background: url('/img/logo/favicon.ico');
+}
+
+.hero_text span {
+    font-size: 2em;
+    font-family: Raleway;
+    font-weight: 300;
+}
+
+
+/* UPPER CONTENT */
+.upper_content {
+    width: 100%;
+    float: left;
+    clear: both;
+    margin: 0 auto;
+    padding: 20px 0 40px;
+    text-align: center;
+}
+
+
+.upper_content_header {
+    margin: 0 20px 50px;
+    border-bottom: #a5a5a5 1px solid;
+}
+
+.column {
+    margin: 0 auto 50px;
+    width: 300px;
+}
+
+
+/* QUOTE */
+.quote, .quote_content, .quote_byline {
+    clear: both;
+}
+
+
+/* WORK */
+.work {
+    width: 100%;
+    clear: both;
+    background: gray;
+}
+
+.work_container {
+    
+}
+
+/*.work_holder {
+    height: 0;
+    width: 200px;
+    padding-top: 200px;
+    margin: 0 auto 50px;
+    background: white;
+    overflow: hidden;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+}
+.work_holder:hover {
+    height: 100px;
+    padding-top: 100px;
+}
+
+.work_label {
+    height: 100px;
+    background: gray;
+    opacity: .5;
+}
+*/
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 980px) {
+    body {
+        /*background-image: url('http://subtlepatterns.com/patterns/noisy.png');
+        background-attachment: scroll;*/
+        background-color: rgba(240,240,240,.9);
+    }
+
+    /* NAV */
+    .nav_logo {
+        height: 75px;
+        line-height: 75px;
+        width: 205px;
+        float: left;
+    }
+
+    .nav_logo h5 {
+        padding: none;
+        margin: none;
+    }
+
+    .nav_links {
+        height: 75px;
+        line-height: 75px;
+        float: right;
+    }
+
+    .nav_link {
+        height: 75px;
+        line-height: 75px;
+        display: inline-block;
+        padding: 0 15px;
+        font-size: .75em;
+    }
+    
+
+    /* HERO */
+    .hero {
+        height: 498px;
+    }
+
+    /* BODY CONTAINER */
+    .body_container {
+        width: 1100px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /* UPPER CONTENT */
+    .upper_content_header {
+        border-bottom: #a5a5a5 1px solid;
+        height: 200px;
+    }
+
+    .upper_content_header h2 {
+        font-size: 3em;
+    }
+
+    .upper_content_header p {
+        font-size: 2em;
+        font-weight: 100;
+    }
+
+    .description {
+        height: 200px;
+        margin: 60px auto;
+        display: flex;
+    }
+
+    .column {
+        height: 240px;
+        width: 250px;
+        float: left;
+        line-height: 50px;
+    }
+
+    .quote_image {
+        height: 110px;;
+        width: 100%;
+        float: left;
+        background: url(http://templated.co/items/demos/transit/images/dark_tint.png), url('/img/backgrounds/lake_mountains_vintage.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        -webkit-filter: grayscale(0.6);
+    }
+
+    .quote_content {
+        height: 260px;
+        width: 600px;
+        margin: 35px auto;
+        padding: 35px 0;
+        quotes: "\201C""\201D""\2018""\2019";
+        font-size: 2.0em;
+        line-height: 2em;
+        border-bottom: #a5a5a5 1px solid;
+        border-top: #a5a5a5 1px solid;
+    }
+    /*.quotes:before {
+        color: #ccc;
+        content: open-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em;
+    }
+    .quotes:after {
+        color: #ccc;
+        content: close-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em;
+    }*/
+
+    .quote_byline {
+        height: 60px;
+        width: 600px;
+        font-family: 'Raleway', sans-serif;
+        margin: 0 auto;
+    }
+
+    .quote_byline:before {
+        content: "\2014";
+    }
+
+    /* EXTRA */
+    .extra {
+        height: 300px;
+        width: 100%;
+        float: left;
+        clear: both;
+        background: rgba(220,220,220,1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .extra_paragraph_container {
+        width: 50%;
+    }
+
+    .extra_paragraph {
+        height: auto;
+        width: 400px;
+        margin: 0 auto;
+        text-align: right;
+        border-top: thin solid gray;
+        border-bottom: thin solid gray;
+    }
+
+    .extra_image {
+        width: 50%;
+    }
+
+        .extra_circle {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border: 15px solid gray;
+            border-radius: 100%;
+            text-align: center;
+            font-size: 1.4em;
+        }
+
+        .extra_circle i {
+            padding-top: 25%;
+        }
+
+    /* WORK */
+    .work {
+        height: 200px;
+        display: flex;
+        align-items: center;
+    }
+
+    .work_holder {
+        width: 250px;
+        line-height: 50px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+
+    /* FOOTER */
+    
+
+    /* SOCIAL */
+    
+
+
+    /* ANIMATIONS */
+    @keyframes rotate {
+        0%   {transform: rotateY(0deg)}
+        50%  {transform: rotateY(90deg)}
+        100% {transform: rotateY(360deg)}
+    }
+}
